@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.0.5)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - lottie-ios (3.1.6)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - SwiftyBeaver (1.8.4)
+
+DEPENDENCIES:
+  - Kingfisher
+  - lottie-ios
+  - Moya
+  - SwiftyBeaver
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - lottie-ios
+    - Moya
+    - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
+
+PODFILE CHECKSUM: 7adbda18afadb95f037ae70798838d24024789c7
+
+COCOAPODS: 1.9.1
