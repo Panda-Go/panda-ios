@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031216AA24300E72002CF516 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031216A924300E72002CF516 /* Color.xcassets */; };
+		031216AC24300F39002CF516 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031216AB24300F39002CF516 /* SignIn.storyboard */; };
+		031216AE24300F45002CF516 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031216AD24300F45002CF516 /* SignUp.storyboard */; };
+		031216B024300F5B002CF516 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031216AF24300F5B002CF516 /* Shop.storyboard */; };
 		03D56E0A2430075B00AF7273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E092430075B00AF7273 /* AppDelegate.swift */; };
 		03D56E0C2430075B00AF7273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E0B2430075B00AF7273 /* SceneDelegate.swift */; };
 		03D56E0E2430075B00AF7273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E0D2430075B00AF7273 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031216A924300E72002CF516 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		031216AB24300F39002CF516 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		031216AD24300F45002CF516 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		031216AF24300F5B002CF516 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		03D56E062430075B00AF7273 /* PandaGo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PandaGo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D56E092430075B00AF7273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D56E0B2430075B00AF7273 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031216A624300CFA002CF516 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				031216AB24300F39002CF516 /* SignIn.storyboard */,
+				031216AD24300F45002CF516 /* SignUp.storyboard */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		031216A724300D13002CF516 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				03D56E0D2430075B00AF7273 /* ViewController.swift */,
+				03D56E0F2430075B00AF7273 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		031216A824300D1F002CF516 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				031216AF24300F5B002CF516 /* Shop.storyboard */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		03D56DFD2430075B00AF7273 = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +97,15 @@
 		03D56E082430075B00AF7273 /* PandaGo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				031216A824300D1F002CF516 /* Shop */,
+				031216A724300D13002CF516 /* Main */,
+				031216A624300CFA002CF516 /* SignIn */,
 				03D56E092430075B00AF7273 /* AppDelegate.swift */,
 				03D56E0B2430075B00AF7273 /* SceneDelegate.swift */,
-				03D56E0D2430075B00AF7273 /* ViewController.swift */,
-				03D56E0F2430075B00AF7273 /* Main.storyboard */,
 				03D56E122430075C00AF7273 /* Assets.xcassets */,
 				03D56E142430075C00AF7273 /* LaunchScreen.storyboard */,
 				03D56E172430075C00AF7273 /* Info.plist */,
+				031216A924300E72002CF516 /* Color.xcassets */,
 			);
 			path = "PandaGo-iOS";
 			sourceTree = "<group>";
@@ -88,7 +124,6 @@
 				D3AA34FFB5F25E28BF1EA948 /* Pods-PandaGo-iOS.debug.xcconfig */,
 				82BD1E4D5B91B114161CAB5B /* Pods-PandaGo-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D56E162430075C00AF7273 /* LaunchScreen.storyboard in Resources */,
+				031216AC24300F39002CF516 /* SignIn.storyboard in Resources */,
+				031216AE24300F45002CF516 /* SignUp.storyboard in Resources */,
+				031216AA24300E72002CF516 /* Color.xcassets in Resources */,
+				031216B024300F5B002CF516 /* Shop.storyboard in Resources */,
 				03D56E132430075C00AF7273 /* Assets.xcassets in Resources */,
 				03D56E112430075B00AF7273 /* Main.storyboard in Resources */,
 			);
