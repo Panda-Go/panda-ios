@@ -28,6 +28,9 @@ class SignInStep1ViewController: KeyBoardViewController {
         attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.5450980392, green: 0.5450980392, blue: 0.5450980392, alpha: 1)])
     }
 
+    @IBAction func nextButtonAction(_ sender: Any) {
+        requestOTP(phoneNumber: phoneNumber)
+    }
 }
 
 extension SignInStep1ViewController {
@@ -41,13 +44,29 @@ extension SignInStep1ViewController {
     }
 }
 
+extension SignInStep1ViewController {
+    func requestOTP(phoneNumber: String) {
+        PandaGoProvider().getLoginOTP(phoneNumber: phoneNumber, completion: { [weak self] data in
+            DispatchQueue.main.async {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SignInStep2ViewController") as! SignInStep2ViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                newViewController.phoneNumber = phoneNumber
+                self?.present(newViewController, animated: true, completion: nil)
+            }
+        }) { error in
+            print("error: ", error)
+        }
+    }
+}
+
 extension SignInStep1ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if countryCodeTextField.text != "" && phoneNumberTextField.text != "" {
             phoneNumber = countryCodeTextField.text!
             guard let text = phoneNumberTextField.text else { return }
             phoneNumber += text.applyPatternOnNumbers(pattern: "##########", replacmentCharacter: "#")
-            
+            print(phoneNumber)
             textFieldFilled = true
         }
         else {
@@ -61,7 +80,7 @@ extension SignInStep1ViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
             textField.text = formattedNumber(number: newString)
-            print(phoneNumber)
+            
             return false
         }
         else {

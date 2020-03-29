@@ -69,7 +69,7 @@ extension KeyBoardViewController {
     
     func formattedDigit(number: String) -> String {
         let cleanDigit = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "   X       X       X       X       X       X"
+        let mask = "   X        X       X       X       X       X"
         var result = ""
         var index = cleanDigit.startIndex
         for ch in mask where index < cleanDigit.endIndex {
