@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
-
+    
+//    let animationView = AnimationView()
+    @IBOutlet weak var animationView: AnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        startAnimation()
     }
 
-
+    func startAnimation() {
+        let animation = Animation.named("panda1")
+        
+        animationView.animation = animation
+        animationView.center = self.view.center // 애니메이션뷰의 위치설정
+        animationView.loopMode = .loop
+        
+        animationView.play()
+    }
 }
 
