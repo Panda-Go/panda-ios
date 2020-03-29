@@ -16,6 +16,8 @@ enum PandaGoService {
     case getFriendList(pandaId: String?)
     case updateFightResult(winner: String, loser: String)
     case updateWeapon(phoneNumber: String, weapon: String)
+    case getWarningSMS(phoneNumber: String)
+    case getWashHandSMS(phoneNumber: String)
 }
 
 extension PandaGoService:TargetType {
@@ -36,14 +38,19 @@ extension PandaGoService:TargetType {
             return "/panda/get_all_pandas"
         case .updateFightResult:
             return "/panda/fight"
-        case .updateWeapon(let phoneNumber):
-            return "/panda/info/\(phoneNumber)/update/weapon"
+        case .updateWeapon:
+            return "/panda/update/weapon"
+        case .getWarningSMS:
+            return "/twilio/notify/warning"
+        case .getWashHandSMS:
+            return "/twilio/notify/wash"
+
         }
     }
     
     var method: Moya.Method { // get, post, put, delete
         switch self {
-        case .getLoginOTP, .getVerification, .getPandaInfo, .getFriendList:
+        case .getLoginOTP, .getVerification, .getPandaInfo, .getFriendList, .getWashHandSMS, .getWarningSMS:
             return .get
         case .updateFightResult, .updateWeapon:
             return .put
@@ -61,8 +68,12 @@ extension PandaGoService:TargetType {
             return .requestPlain
         case .updateFightResult(let winner, let loser):
             return .requestParameters(parameters: ["winner": winner, "loser": loser], encoding: JSONEncoding.default)
-        case .updateWeapon(let weapon):
-            return .requestParameters(parameters: ["weapon": weapon], encoding: JSONEncoding.default)
+        case .updateWeapon(let phoneNumber, let weapon):
+            return .requestParameters(parameters: ["weapon": weapon, "pandaId":phoneNumber], encoding: JSONEncoding.default)
+        case .getWashHandSMS(let phoneNumber):
+            return .requestParameters(parameters: ["phoneNumber":phoneNumber], encoding: URLEncoding.queryString)
+        case .getWarningSMS(let phoneNumber):
+            return .requestParameters(parameters: ["phoneNumber": phoneNumber], encoding: URLEncoding.queryString)
         }
     }
     

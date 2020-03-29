@@ -139,6 +139,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-ff-u0P">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="284"/>
                                         <state key="normal" image="popupWheat"/>
+                                        <connections>
+                                            <action selector="buyWeaponButtonAction:" destination="aVS-zE-ptG" eventType="touchUpInside" id="t0E-V1-vSL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -48,6 +48,19 @@ class PandaGoProvider {
             self.resultTask(result, completion: completion, failure: failure)
         }
     }
+    
+    func getWashHandSMS(phoneNumber: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.getWashHandSMS(phoneNumber: phoneNumber)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func getWarningSMS(phoneNumber: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.getWarningSMS(phoneNumber: phoneNumber)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
 }
 
 extension PandaGoProvider {

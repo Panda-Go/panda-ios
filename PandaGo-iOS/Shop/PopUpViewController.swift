@@ -23,19 +23,49 @@ class PopUpViewController: UIViewController {
     }
     
     
+    @IBAction func buyWeaponButtonAction(_ sender: Any) {
+        let id = UserDefaults.standard.string(forKey: "_id")
+        if let phoneNumber = id {
+            var weapon = ""
+            switch weaponName {
+            case "popupStick":
+                weapon = "Stick"
+            case "popupWheat":
+                weapon = "Wheat"
+            case "popupSpoon":
+                weapon = "Spoon"
+            case "popupBamboo":
+                weapon = "Bamboo"
+            default:
+                weapon = ""
+            }
+            
+            requestUpdateWeapon(phoneNumber: phoneNumber, weapon: weapon)
+        }
+    }
     
 
     @IBAction func closePopUp(_ sender: Any) {
         self.view.removeFromSuperview()
     }
-    /*
-    // MARK: - Navigation
+   
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension PopUpViewController {
+    func requestUpdateWeapon(phoneNumber:String, weapon: String) {
+        PandaGoProvider().updateWeapon(phoneNumber: phoneNumber, weapon: weapon, completion: { [weak self] (data) in
+            if let phoneNumber = UserDefaults.standard.string(forKey: "_id") {
+                guard let parent = self?.parent as? ShopViewController else { return }
+                guard let main = parent.mainViewController as? ViewController else { return }
+                main.requestPandaInfo(phoneNumber: phoneNumber)
+                print(main.pandaInfo?.points)
+            }
+            DispatchQueue.main.async {
+                self?.dismiss(animated: true, completion: nil)
+            }
+            
+        }) { (error) in
+            print("error: ", error)
+        }
     }
-    */
-
 }

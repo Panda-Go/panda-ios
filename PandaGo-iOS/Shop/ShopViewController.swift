@@ -9,6 +9,8 @@
 import UIKit
 
 class ShopViewController: UIViewController {
+    
+    var mainViewController:UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()

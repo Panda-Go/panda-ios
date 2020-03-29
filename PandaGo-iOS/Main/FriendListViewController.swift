@@ -11,8 +11,8 @@ import UIKit
 class FriendListViewController: UIViewController {
     @IBOutlet weak var friendListTableView: UITableView!
     
-    var friendList: String = ""
-    var myInfo: PandaInfoResponse?
+    var friendList: FriendList?
+    var myInfo: Panda?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,10 @@ class FriendListViewController: UIViewController {
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
+        if let phoneNumber = UserDefaults.standard.string(forKey: "_id") {
+            guard let parent = self.parent as? ViewController else { return }
+            parent.requestPandaInfo(phoneNumber: phoneNumber)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -35,15 +39,19 @@ extension FriendListViewController: UITableViewDelegate {
 
 extension FriendListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let list = friendList {
+            return list.count
+        }
+        else {
+            return 10
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendListCell") as? FriendListTableViewCell else {
             return UITableViewCell()
         }
-        
-//        cell.configuration(name: "Suji Kim")
+        cell.configuration(panda: friendList![indexPath.row])
         cell.delegate = self
         
         return cell

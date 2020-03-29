@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SignInStep1ViewController: KeyBoardViewController {
     @IBOutlet weak var countryCodeTextField: UITextField!
@@ -16,9 +17,11 @@ class SignInStep1ViewController: KeyBoardViewController {
     private var textFieldFilled = false
     private var phoneNumber = ""
     
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         countryCodeTextField.delegate = self
         phoneNumberTextField.delegate = self
         
@@ -29,6 +32,7 @@ class SignInStep1ViewController: KeyBoardViewController {
     }
 
     @IBAction func nextButtonAction(_ sender: Any) {
+        locationManager.requestWhenInUseAuthorization()
         requestOTP(phoneNumber: phoneNumber)
     }
 }

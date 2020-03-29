@@ -13,6 +13,8 @@ class FightPopUpViewController: UIViewController {
     @IBOutlet weak var resultImageView: UIImageView!
     
     var result: String = ""
+    var yourId: String = ""
+    var myId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +26,24 @@ class FightPopUpViewController: UIViewController {
     }
     
     @IBAction func goBackToRoomButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        if result == "youlose" {
+            updateFightResult(winner: yourId, loser: myId)
+        }
+        else {
+            updateFightResult(winner: myId, loser: yourId)
+        }
+        
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FightPopUpViewController {
+    func updateFightResult(winner:String, loser:String) {
+        PandaGoProvider().updateFightResult(winner: winner, loser: loser, completion: { (data) in
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }) { (error) in
+            print("error: ", error)
+        }
     }
-    */
-
 }

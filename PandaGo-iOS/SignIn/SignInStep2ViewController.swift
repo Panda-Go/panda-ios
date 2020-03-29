@@ -71,6 +71,12 @@ extension SignInStep2ViewController {
                     let pandaInfoResponse = try decoder.decode(PandaInfoResponse.self, from: data)
                     self?.pandaInfoResponse = pandaInfoResponse
                     
+                    UserDefaults.standard.set(self?.pandaInfoResponse?._id, forKey: "_id")
+                    UserDefaults.standard.set(self?.pandaInfoResponse?.name, forKey: "name")
+                    UserDefaults.standard.set(self?.pandaInfoResponse?.weapon, forKey: "weapon")
+                    UserDefaults.standard.set(self?.pandaInfoResponse?.points, forKey: "points")
+                    
+                    
                 } catch {
                     print("error: ", error)
                 }
@@ -80,7 +86,6 @@ extension SignInStep2ViewController {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateInitialViewController() as! ViewController
                 newViewController.modalPresentationStyle = .fullScreen
-                newViewController.pandaInfo = self?.pandaInfoResponse
                 self?.present(newViewController, animated: true, completion: nil)
             }
             
@@ -98,8 +103,6 @@ extension SignInStep2ViewController: UITextFieldDelegate {
             textField.text = text.applyPatternOnNumbers(pattern: "   X        X       X       X       X       X", replacmentCharacter: "X")
             textFieldFilled = true
             digitNum = text.applyPatternOnNumbers(pattern: "XXXXXX", replacmentCharacter: "X")
-            print(digitNum)
-            print(phoneNumber)
         }
         else {
             textFieldFilled = false
@@ -114,6 +117,5 @@ extension SignInStep2ViewController: UITextFieldDelegate {
         textField.text = formattedDigit(number: newString)
 
         return false
-        
     }
 }
