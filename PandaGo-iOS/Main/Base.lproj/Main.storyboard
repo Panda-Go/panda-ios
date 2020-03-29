@@ -57,8 +57,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-sE-nUZ">
-                                <rect key="frame" x="295" y="43" width="100" height="100"/>
+                                <rect key="frame" x="345" y="68" width="50" height="50"/>
                                 <state key="normal" image="btShop"/>
+                                <connections>
+                                    <segue destination="v5N-j2-IU8" kind="show" id="z6v-ge-cDW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-Ox-ghW">
                                 <rect key="frame" x="111" y="809" width="192" height="48"/>
@@ -135,6 +138,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="138"/>
+        </scene>
+        <!--Shop-->
+        <scene sceneID="KEi-iI-Jqk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shop" id="v5N-j2-IU8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QIe-aA-TcR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ib0-6m-V4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="138"/>
         </scene>
     </scenes>
     <resources>
