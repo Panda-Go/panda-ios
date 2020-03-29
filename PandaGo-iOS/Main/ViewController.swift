@@ -11,13 +11,17 @@ import Lottie
 
 class ViewController: UIViewController {
     
-//    let animationView = AnimationView()
+    @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var animationView: AnimationView!
+    
+    var pandaInfo: PandaInfoResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        if let info = pandaInfo {
+            pointLabel.text = info.points + "p"
+        }
         startAnimation()
     }
 
