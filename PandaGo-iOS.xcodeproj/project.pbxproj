@@ -12,15 +12,12 @@
 		031216AE24300F45002CF516 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031216AD24300F45002CF516 /* SignUp.storyboard */; };
 		031216B024300F5B002CF516 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031216AF24300F5B002CF516 /* Shop.storyboard */; };
 		031216B324301798002CF516 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031216B224301798002CF516 /* UIView+Extension.swift */; };
-		031216B924301D0A002CF516 /* panda4.json in Resources */ = {isa = PBXBuildFile; fileRef = 031216B524301D0A002CF516 /* panda4.json */; };
-		031216BB24301D0A002CF516 /* panda3.json in Resources */ = {isa = PBXBuildFile; fileRef = 031216B724301D0A002CF516 /* panda3.json */; };
-		031216BC24301D0A002CF516 /* panda2.json in Resources */ = {isa = PBXBuildFile; fileRef = 031216B824301D0A002CF516 /* panda2.json */; };
-		03CBC3412430336F00B24D83 /* panda1.json in Resources */ = {isa = PBXBuildFile; fileRef = 03CBC3402430336F00B24D83 /* panda1.json */; };
 		03CBC34524303F8400B24D83 /* SignInStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBC34424303F8400B24D83 /* SignInStep1ViewController.swift */; };
 		03CBC3472430442A00B24D83 /* SignInStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBC3462430442A00B24D83 /* SignInStep2ViewController.swift */; };
 		03CBC34924304E5C00B24D83 /* SignUpStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBC34824304E5C00B24D83 /* SignUpStep1ViewController.swift */; };
 		03CBC34B24304E7D00B24D83 /* SignUpStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBC34A24304E7D00B24D83 /* SignUpStep2ViewController.swift */; };
 		03CBC34D24304E8B00B24D83 /* SignUpStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBC34C24304E8B00B24D83 /* SignUpStep3ViewController.swift */; };
+		03CBC34F2430552600B24D83 /* pandastep2.json in Resources */ = {isa = PBXBuildFile; fileRef = 03CBC34E2430552600B24D83 /* pandastep2.json */; };
 		03D56E0A2430075B00AF7273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E092430075B00AF7273 /* AppDelegate.swift */; };
 		03D56E0C2430075B00AF7273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E0B2430075B00AF7273 /* SceneDelegate.swift */; };
 		03D56E0E2430075B00AF7273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D56E0D2430075B00AF7273 /* ViewController.swift */; };
@@ -36,15 +33,12 @@
 		031216AD24300F45002CF516 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		031216AF24300F5B002CF516 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		031216B224301798002CF516 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		031216B524301D0A002CF516 /* panda4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panda4.json; sourceTree = "<group>"; };
-		031216B724301D0A002CF516 /* panda3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panda3.json; sourceTree = "<group>"; };
-		031216B824301D0A002CF516 /* panda2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panda2.json; sourceTree = "<group>"; };
-		03CBC3402430336F00B24D83 /* panda1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panda1.json; sourceTree = "<group>"; };
 		03CBC34424303F8400B24D83 /* SignInStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStep1ViewController.swift; sourceTree = "<group>"; };
 		03CBC3462430442A00B24D83 /* SignInStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStep2ViewController.swift; sourceTree = "<group>"; };
 		03CBC34824304E5C00B24D83 /* SignUpStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep1ViewController.swift; sourceTree = "<group>"; };
 		03CBC34A24304E7D00B24D83 /* SignUpStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep2ViewController.swift; sourceTree = "<group>"; };
 		03CBC34C24304E8B00B24D83 /* SignUpStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep3ViewController.swift; sourceTree = "<group>"; };
+		03CBC34E2430552600B24D83 /* pandastep2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pandastep2.json; sourceTree = "<group>"; };
 		03D56E062430075B00AF7273 /* PandaGo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PandaGo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D56E092430075B00AF7273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D56E0B2430075B00AF7273 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,10 +106,7 @@
 		031216B424301CAB002CF516 /* PandaAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				03CBC3402430336F00B24D83 /* panda1.json */,
-				031216B824301D0A002CF516 /* panda2.json */,
-				031216B724301D0A002CF516 /* panda3.json */,
-				031216B524301D0A002CF516 /* panda4.json */,
+				03CBC34E2430552600B24D83 /* pandastep2.json */,
 			);
 			path = PandaAnimations;
 			sourceTree = "<group>";
@@ -233,15 +224,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03CBC3412430336F00B24D83 /* panda1.json in Resources */,
-				031216BC24301D0A002CF516 /* panda2.json in Resources */,
 				03D56E162430075C00AF7273 /* LaunchScreen.storyboard in Resources */,
 				031216AC24300F39002CF516 /* SignIn.storyboard in Resources */,
 				031216AE24300F45002CF516 /* SignUp.storyboard in Resources */,
-				031216B924301D0A002CF516 /* panda4.json in Resources */,
+				03CBC34F2430552600B24D83 /* pandastep2.json in Resources */,
 				031216AA24300E72002CF516 /* Color.xcassets in Resources */,
 				031216B024300F5B002CF516 /* Shop.storyboard in Resources */,
-				031216BB24301D0A002CF516 /* panda3.json in Resources */,
 				03D56E132430075C00AF7273 /* Assets.xcassets in Resources */,
 				03D56E112430075B00AF7273 /* Main.storyboard in Resources */,
 			);

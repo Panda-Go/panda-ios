@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     func startAnimation() {
-        let animation = Animation.named("panda1")
+        let animation = Animation.named("pandastep2")
         
         animationView.animation = animation
         animationView.center = self.view.center // 애니메이션뷰의 위치설정
