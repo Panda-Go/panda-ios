@@ -114,7 +114,7 @@ for verification.</string>
                                 <color key="textColor" name="greyishBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-Na-0XL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-Na-0XL">
                                 <rect key="frame" x="265" y="495" width="126" height="126"/>
                                 <state key="normal" image="icArrow"/>
                                 <connections>
@@ -234,6 +234,7 @@ for verification.</string>
         <!--Navigation Controller-->
         <scene sceneID="sIo-nk-pDY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91y-fC-bpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="I4o-Cm-jtN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Za-D3-UYV">
@@ -244,7 +245,6 @@ for verification.</string>
                         <segue destination="sEV-J7-mBe" kind="relationship" relationship="rootViewController" id="pSI-nJ-ixH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="91y-fC-bpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="229.6875"/>
         </scene>
