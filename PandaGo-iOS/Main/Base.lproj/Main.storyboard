@@ -57,7 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-sE-nUZ">
-                                <rect key="frame" x="345" y="68" width="50" height="50"/>
+                                <rect key="frame" x="295" y="43" width="100" height="100"/>
                                 <state key="normal" image="btShop"/>
                                 <connections>
                                     <segue destination="v5N-j2-IU8" kind="show" id="z6v-ge-cDW"/>
@@ -68,7 +68,6 @@
                                 <color key="backgroundColor" name="greyTeal"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="fjV-gN-reu"/>
-                                    <constraint firstAttribute="width" constant="192" id="s7z-Tr-77k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <state key="normal" title="Fight">
@@ -125,11 +124,12 @@
                             <constraint firstAttribute="trailing" secondItem="yLs-5a-dYo" secondAttribute="trailing" id="XWf-Pa-3Ru"/>
                             <constraint firstItem="BiB-7o-oU9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Yec-gj-X0h"/>
                             <constraint firstItem="yLs-5a-dYo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZOP-wn-DEn"/>
+                            <constraint firstItem="SLb-Ox-ghW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="bMJ-jT-uYo"/>
                             <constraint firstAttribute="bottom" secondItem="SLb-Ox-ghW" secondAttribute="bottom" constant="39" id="dsO-Ey-TYH"/>
                             <constraint firstItem="SLb-Ox-ghW" firstAttribute="top" secondItem="BiB-7o-oU9" secondAttribute="bottom" constant="47" id="kdZ-M6-8MJ"/>
                             <constraint firstItem="sNz-sE-nUZ" firstAttribute="centerY" secondItem="4g7-be-hv2" secondAttribute="centerY" id="kdf-Fl-WTa"/>
                             <constraint firstItem="4g7-be-hv2" firstAttribute="top" secondItem="0h6-4n-siN" secondAttribute="bottom" constant="4" id="qKC-UN-qQo"/>
-                            <constraint firstItem="SLb-Ox-ghW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkB-fm-3cV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SLb-Ox-ghW" secondAttribute="trailing" constant="111" id="sdl-VB-eTJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sNz-sE-nUZ" secondAttribute="trailing" constant="19" id="seR-cw-ajF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
