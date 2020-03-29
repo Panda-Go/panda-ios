@@ -24,6 +24,9 @@
 		03D56E112430075B00AF7273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D56E0F2430075B00AF7273 /* Main.storyboard */; };
 		03D56E132430075C00AF7273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D56E122430075C00AF7273 /* Assets.xcassets */; };
 		03D56E162430075C00AF7273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D56E142430075C00AF7273 /* LaunchScreen.storyboard */; };
+		03E297AF24305CC400D6E096 /* Fight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E297AE24305CC400D6E096 /* Fight.storyboard */; };
+		03E297B124305F7200D6E096 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297B024305F7200D6E096 /* FriendListViewController.swift */; };
+		03E297B32430615500D6E096 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297B22430615500D6E096 /* FriendListTableViewCell.swift */; };
 		C464E9488773D5830F4128C1 /* Pods_PandaGo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C31635E18C563F1EA06D545 /* Pods_PandaGo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		03D56E122430075C00AF7273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03D56E152430075C00AF7273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03D56E172430075C00AF7273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E297AE24305CC400D6E096 /* Fight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fight.storyboard; sourceTree = "<group>"; };
+		03E297B024305F7200D6E096 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		03E297B22430615500D6E096 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
 		2C31635E18C563F1EA06D545 /* Pods_PandaGo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaGo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BD1E4D5B91B114161CAB5B /* Pods-PandaGo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaGo-iOS.release.xcconfig"; path = "Target Support Files/Pods-PandaGo-iOS/Pods-PandaGo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D3AA34FFB5F25E28BF1EA948 /* Pods-PandaGo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaGo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PandaGo-iOS/Pods-PandaGo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 			children = (
 				03D56E0D2430075B00AF7273 /* ViewController.swift */,
 				03D56E0F2430075B00AF7273 /* Main.storyboard */,
+				03E297AE24305CC400D6E096 /* Fight.storyboard */,
+				03E297B024305F7200D6E096 /* FriendListViewController.swift */,
+				03E297B22430615500D6E096 /* FriendListTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E297AF24305CC400D6E096 /* Fight.storyboard in Resources */,
 				03D56E162430075C00AF7273 /* LaunchScreen.storyboard in Resources */,
 				031216AC24300F39002CF516 /* SignIn.storyboard in Resources */,
 				031216AE24300F45002CF516 /* SignUp.storyboard in Resources */,
@@ -284,12 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E297B124305F7200D6E096 /* FriendListViewController.swift in Sources */,
 				03D56E0E2430075B00AF7273 /* ViewController.swift in Sources */,
 				03D56E0A2430075B00AF7273 /* AppDelegate.swift in Sources */,
 				03CBC34924304E5C00B24D83 /* SignUpStep1ViewController.swift in Sources */,
 				03CBC34524303F8400B24D83 /* SignInStep1ViewController.swift in Sources */,
 				03CBC3472430442A00B24D83 /* SignInStep2ViewController.swift in Sources */,
 				03CBC34B24304E7D00B24D83 /* SignUpStep2ViewController.swift in Sources */,
+				03E297B32430615500D6E096 /* FriendListTableViewCell.swift in Sources */,
 				031216B324301798002CF516 /* UIView+Extension.swift in Sources */,
 				03D56E0C2430075B00AF7273 /* SceneDelegate.swift in Sources */,
 				03CBC34D24304E8B00B24D83 /* SignUpStep3ViewController.swift in Sources */,
