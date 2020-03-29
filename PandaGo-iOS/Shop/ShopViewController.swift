@@ -16,10 +16,15 @@ class ShopViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func wheatButton(_ sender: Any) {
         let popOverVc = UIStoryboard(name:"Shop", bundle: nil).instantiateViewController(identifier: "sbPopUpId") as! PopUpViewController
-        self.addChild(popOverVc)
         popOverVc.weaponName = "popupWheat"
+        self.addChild(popOverVc)
+
         popOverVc.view.frame = self.view.frame
         self.view.addSubview(popOverVc.view)
         popOverVc.didMove(toParent: self)
@@ -27,24 +32,27 @@ class ShopViewController: UIViewController {
     
     @IBAction func stickButton(_ sender: Any) {
         let popOverVc = UIStoryboard(name:"Shop", bundle: nil).instantiateViewController(identifier: "sbPopUpId") as! PopUpViewController
-        self.addChild(popOverVc)
         popOverVc.weaponName = "popupStick"
+        self.addChild(popOverVc)
+        
         popOverVc.view.frame = self.view.frame
         self.view.addSubview(popOverVc.view)
         popOverVc.didMove(toParent: self)
     }
     @IBAction func spoonButton(_ sender: Any) {
         let popOverVc = UIStoryboard(name:"Shop", bundle: nil).instantiateViewController(identifier: "sbPopUpId") as! PopUpViewController
+        popOverVc.weaponName = "popupSpoon"
         self.addChild(popOverVc)
-        popOverVc.weaponName = "popupSoon"
+        
         popOverVc.view.frame = self.view.frame
         self.view.addSubview(popOverVc.view)
         popOverVc.didMove(toParent: self)
     }
     @IBAction func bambooButton(_ sender: Any) {
         let popOverVc = UIStoryboard(name:"Shop", bundle: nil).instantiateViewController(identifier: "sbPopUpId") as! PopUpViewController
-        self.addChild(popOverVc)
         popOverVc.weaponName = "popupBamboo"
+        self.addChild(popOverVc)
+        
         popOverVc.view.frame = self.view.frame
         self.view.addSubview(popOverVc.view)
         popOverVc.didMove(toParent: self)

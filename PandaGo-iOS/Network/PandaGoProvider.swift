@@ -14,19 +14,37 @@ class PandaGoProvider {
     let provider = MoyaProvider<PandaGoService>()
 
     func getLoginOTP(phoneNumber: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
-        provider.request(.getLoginOTP(phoneNumber)) { result in
+        provider.request(.getLoginOTP(phoneNumber: phoneNumber)) { result in
             self.resultTask(result, completion: completion, failure: failure)
         }
     }
     
     func getVerification(phoneNumber: String, code: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
-        provider.request(.getVerification(phoneNumber, code)) { result in
+        provider.request(.getVerification(phoneNumber: phoneNumber, code: code)) { result in
             self.resultTask(result, completion: completion, failure: failure)
         }
     }
     
     func getPandaInfo(pandaId: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
-        provider.request(.getPandaInfo(pandaId)) { result in
+        provider.request(.getPandaInfo(pandaId: pandaId)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func getFriendList(pandaId: String?, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.getFriendList(pandaId: nil)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func updateFightResult(winner: String, loser: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.updateFightResult(winner: winner, loser: loser)) { result in
+            self.resultTask(result, completion: completion, failure: failure)
+        }
+    }
+    
+    func updateWeapon(phoneNumber: String, weapon: String, completion: @escaping ((Data?) -> Void), failure: @escaping ((Error) -> Void)) {
+        provider.request(.updateWeapon(phoneNumber: phoneNumber, weapon: weapon)) { result in
             self.resultTask(result, completion: completion, failure: failure)
         }
     }

@@ -11,7 +11,7 @@
         <!--Friend List View Controller-->
         <scene sceneID="pSy-j1-VNX">
             <objects>
-                <viewController id="4YQ-je-3cQ" customClass="FriendListViewController" customModule="PandaGo_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4YQ-je-3cQ" customClass="FriendListViewController" customModule="PandaGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vJk-sK-Lqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                 <rect key="frame" x="24" y="263" width="366" height="599"/>
                                 <color key="backgroundColor" name="palePeach"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendListCell" id="BTv-eF-c16" customClass="FriendListTableViewCell" customModule="PandaGo_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendListCell" id="BTv-eF-c16" customClass="FriendListTableViewCell" customModule="PandaGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="366" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BTv-eF-c16" id="Z05-I0-7dr">
@@ -56,7 +56,7 @@
                                                             <rect key="frame" x="151" y="5" width="210" height="76"/>
                                                             <state key="normal" image="btGofight"/>
                                                             <connections>
-                                                                <segue destination="H4g-aV-9ir" kind="show" id="gaI-R5-ZZy"/>
+                                                                <action selector="fightButtonAction:" destination="BTv-eF-c16" eventType="touchUpInside" id="zSS-AW-Pwh"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -119,31 +119,31 @@
             </objects>
             <point key="canvasLocation" x="-20" y="163"/>
         </scene>
-        <!--View Controller-->
+        <!--Fight View Controller-->
         <scene sceneID="iNP-Vq-70q">
             <objects>
-                <viewController id="H4g-aV-9ir" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FightViewController" id="H4g-aV-9ir" customClass="FightViewController" customModule="PandaGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3kW-K7-BFA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="tra-cE-QOx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="illustSpark" translatesAutoresizingMaskIntoConstraints="NO" id="N3J-cc-keb">
-                                <rect key="frame" x="127" y="503" width="160" height="96"/>
+                                <rect key="frame" x="127" y="530" width="160" height="96"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bambooPandaR" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-Jg-WGH">
-                                <rect key="frame" x="290" y="406" width="290" height="290"/>
+                                <rect key="frame" x="290" y="433" width="290" height="290"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bambooPandaL" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-D4-bw3">
-                                <rect key="frame" x="-166" y="405" width="290" height="292"/>
+                                <rect key="frame" x="-166" y="432" width="290" height="292"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="vs" translatesAutoresizingMaskIntoConstraints="NO" id="gfF-WV-GBv">
-                                <rect key="frame" x="169" y="698" width="76" height="72"/>
+                                <rect key="frame" x="169" y="725" width="76" height="72"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-lp-C5S">
-                                <rect key="frame" x="0.0" y="716" width="145" height="36"/>
+                                <rect key="frame" x="0.0" y="743" width="145" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju1-aC-1tj">
                                         <rect key="frame" x="5" y="5" width="135" height="31"/>
@@ -174,7 +174,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzr-27-Nmf">
-                                <rect key="frame" x="269" y="716" width="145" height="36"/>
+                                <rect key="frame" x="269" y="743" width="145" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aig-60-ot8">
                                         <rect key="frame" x="5" y="5" width="135" height="31"/>
@@ -205,13 +205,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100p" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-QV-rPE">
-                                <rect key="frame" x="54.5" y="766" width="36" height="20"/>
+                                <rect key="frame" x="54.5" y="793" width="36" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" name="white"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100p" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOU-e1-M7K">
-                                <rect key="frame" x="323.5" y="766" width="36" height="20"/>
+                                <rect key="frame" x="323.5" y="793" width="36" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" name="white"/>
                                 <nil key="highlightedColor"/>
@@ -243,10 +243,98 @@
                         <viewLayoutGuide key="safeArea" id="d6s-cG-zPu"/>
                     </view>
                     <navigationItem key="navigationItem" id="j5E-Hq-6re"/>
+                    <connections>
+                        <outlet property="myPandaImageView" destination="YNO-D4-bw3" id="BiP-k7-0U1"/>
+                        <outlet property="myPandaNameLabel" destination="ju1-aC-1tj" id="buA-Xp-Q3a"/>
+                        <outlet property="myPandaPointLabel" destination="IQd-QV-rPE" id="xUe-Em-yws"/>
+                        <outlet property="yourPandaImageView" destination="9RZ-Jg-WGH" id="VBq-lq-MZ3"/>
+                        <outlet property="yourPandaNameLabel" destination="aig-60-ot8" id="iQX-kQ-87s"/>
+                        <outlet property="yourPandaPointLabel" destination="cOU-e1-M7K" id="tuz-al-1Z1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mn-co-7Yt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="695.6521739130435" y="162.72321428571428"/>
+        </scene>
+        <!--Fight Pop Up View Controller-->
+        <scene sceneID="jwb-de-V8j">
+            <objects>
+                <viewController storyboardIdentifier="FightPopUpViewController" id="R1h-dN-nJd" customClass="FightPopUpViewController" customModule="PandaGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BlA-ZA-9xw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xe-B5-91f">
+                                <rect key="frame" x="44" y="223" width="326" height="450"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="youwin" translatesAutoresizingMaskIntoConstraints="NO" id="isi-0m-vf2">
+                                        <rect key="frame" x="64" y="60" width="198" height="270"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53u-yj-0dD">
+                                        <rect key="frame" x="73" y="374" width="180" height="48"/>
+                                        <color key="backgroundColor" name="greyTeal"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="yDn-21-xmS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <color key="tintColor" name="white"/>
+                                        <state key="normal" title="Go back to room">
+                                            <color key="titleColor" name="white"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="brownishGrey"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goBackToRoomButtonAction:" destination="R1h-dN-nJd" eventType="touchUpInside" id="2Mp-6w-750"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="53u-yj-0dD" secondAttribute="bottom" constant="28" id="386-HC-Hv1"/>
+                                    <constraint firstAttribute="trailing" secondItem="isi-0m-vf2" secondAttribute="trailing" constant="64" id="FDb-9P-vrD"/>
+                                    <constraint firstItem="isi-0m-vf2" firstAttribute="leading" secondItem="8Xe-B5-91f" secondAttribute="leading" constant="64" id="FQf-CW-ct2"/>
+                                    <constraint firstItem="53u-yj-0dD" firstAttribute="leading" secondItem="8Xe-B5-91f" secondAttribute="leading" constant="73" id="ZPE-6c-VmJ"/>
+                                    <constraint firstItem="isi-0m-vf2" firstAttribute="top" secondItem="8Xe-B5-91f" secondAttribute="top" constant="60" id="nyp-cf-bfl"/>
+                                    <constraint firstItem="53u-yj-0dD" firstAttribute="top" secondItem="isi-0m-vf2" secondAttribute="bottom" constant="44" id="uWt-sm-nq1"/>
+                                    <constraint firstAttribute="trailing" secondItem="53u-yj-0dD" secondAttribute="trailing" constant="73" id="vuK-F8-XAa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="brownishGrey"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8Xe-B5-91f" firstAttribute="leading" secondItem="h57-z7-W5b" secondAttribute="leading" constant="44" id="cgi-kc-Zlg"/>
+                            <constraint firstItem="h57-z7-W5b" firstAttribute="trailing" secondItem="8Xe-B5-91f" secondAttribute="trailing" constant="44" id="hbF-DE-5SV"/>
+                            <constraint firstItem="8Xe-B5-91f" firstAttribute="centerY" secondItem="BlA-ZA-9xw" secondAttribute="centerY" id="xWD-j8-5fK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h57-z7-W5b"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="isi-0m-vf2" id="cr3-hZ-TP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4F-pu-OdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="166"/>
         </scene>
     </scenes>
     <resources>
@@ -258,8 +346,12 @@
         <image name="icBack" width="50" height="50"/>
         <image name="illustSpark" width="80" height="48"/>
         <image name="vs" width="38" height="36"/>
+        <image name="youwin" width="171" height="135"/>
         <namedColor name="brownishGrey">
             <color red="0.50980392156862742" green="0.45882352941176469" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyTeal">
+            <color red="0.40392156862745099" green="0.58823529411764708" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greyishBrown">
             <color red="0.2627450980392157" green="0.25098039215686274" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

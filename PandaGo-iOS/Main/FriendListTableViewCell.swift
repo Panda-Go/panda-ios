@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol FriendTableViewCellDelegate: AnyObject {
+    func friendInformation(_ tableViewCell: FriendListTableViewCell, pandaInfo: PandaInfoResponse)
+}
+
 class FriendListTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
+    
+    weak var delegate:FriendTableViewCellDelegate?
+    var pandaInfo: PandaInfoResponse?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,9 +29,16 @@ class FriendListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configuration(name: String) {
-        usernameLabel.text = name
-        
+    func configuration(panda: PandaInfoResponse) {
+        pandaInfo = panda
+        usernameLabel.text = pandaInfo?.name
     }
-
+    
+    
+    @IBAction func fightButtonAction(_ sender: Any) {
+        if let delegates = delegate, let panda = pandaInfo {
+            delegates.friendInformation(self, pandaInfo: panda)
+        }
+    }
+    
 }

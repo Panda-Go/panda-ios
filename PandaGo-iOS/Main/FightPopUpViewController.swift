@@ -1,33 +1,32 @@
 //
-//  PopUpViewController.swift
+//  FightPopUpViewController.swift
 //  PandaGo-iOS
 //
-//  Created by Param Bole on 3/29/20.
+//  Created by Suji Kim on 3/29/20.
 //  Copyright © 2020 sjkim. All rights reserved.
 //
 
 import UIKit
 
-class PopUpViewController: UIViewController {
-    var weaponName:String = ""
+class FightPopUpViewController: UIViewController {
 
-    @IBOutlet weak var popUp: UIButton!
+    @IBOutlet weak var resultImageView: UIImageView!
+    
+    var result: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         // Do any additional setup after loading the view.
         
-        let image = UIImage(named: weaponName)
-        popUp.setImage(image, for: .normal)
+        let image = UIImage(named: result)
+        resultImageView.image = image
     }
     
-    
-    
-
-    @IBAction func closePopUp(_ sender: Any) {
-        self.view.removeFromSuperview()
+    @IBAction func goBackToRoomButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 

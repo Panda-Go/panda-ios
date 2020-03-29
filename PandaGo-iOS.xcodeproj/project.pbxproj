@@ -36,6 +36,10 @@
 		03E297C224309B2600D6E096 /* PandaGoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297C124309B2600D6E096 /* PandaGoService.swift */; };
 		03E297C72430A4F700D6E096 /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297C62430A4F700D6E096 /* VerificationResponse.swift */; };
 		03E297C92430A9C300D6E096 /* PandaInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297C82430A9C300D6E096 /* PandaInfoResponse.swift */; };
+		03E297CC2430B4F000D6E096 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297CA2430B4F000D6E096 /* PopUpViewController.swift */; };
+		03E297CD2430B4F000D6E096 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297CB2430B4F000D6E096 /* ShopViewController.swift */; };
+		03E297D12430CB6C00D6E096 /* FightPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297D02430CB6C00D6E096 /* FightPopUpViewController.swift */; };
+		03E297D32430CBCB00D6E096 /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E297D22430CBCB00D6E096 /* FightViewController.swift */; };
 		C464E9488773D5830F4128C1 /* Pods_PandaGo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C31635E18C563F1EA06D545 /* Pods_PandaGo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		03E297C124309B2600D6E096 /* PandaGoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaGoService.swift; sourceTree = "<group>"; };
 		03E297C62430A4F700D6E096 /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
 		03E297C82430A9C300D6E096 /* PandaInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaInfoResponse.swift; sourceTree = "<group>"; };
+		03E297CA2430B4F000D6E096 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		03E297CB2430B4F000D6E096 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		03E297D02430CB6C00D6E096 /* FightPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightPopUpViewController.swift; sourceTree = "<group>"; };
+		03E297D22430CBCB00D6E096 /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
 		2C31635E18C563F1EA06D545 /* Pods_PandaGo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaGo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BD1E4D5B91B114161CAB5B /* Pods-PandaGo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaGo-iOS.release.xcconfig"; path = "Target Support Files/Pods-PandaGo-iOS/Pods-PandaGo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D3AA34FFB5F25E28BF1EA948 /* Pods-PandaGo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaGo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PandaGo-iOS/Pods-PandaGo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +118,8 @@
 				03E297AE24305CC400D6E096 /* Fight.storyboard */,
 				03E297B024305F7200D6E096 /* FriendListViewController.swift */,
 				03E297B22430615500D6E096 /* FriendListTableViewCell.swift */,
+				03E297D02430CB6C00D6E096 /* FightPopUpViewController.swift */,
+				03E297D22430CBCB00D6E096 /* FightViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -117,6 +127,8 @@
 		031216A824300D1F002CF516 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				03E297CA2430B4F000D6E096 /* PopUpViewController.swift */,
+				03E297CB2430B4F000D6E096 /* ShopViewController.swift */,
 				031216AF24300F5B002CF516 /* Shop.storyboard */,
 			);
 			path = Shop;
@@ -342,13 +354,16 @@
 			files = (
 				03E297B124305F7200D6E096 /* FriendListViewController.swift in Sources */,
 				03D56E0E2430075B00AF7273 /* ViewController.swift in Sources */,
+				03E297D32430CBCB00D6E096 /* FightViewController.swift in Sources */,
 				03E297C92430A9C300D6E096 /* PandaInfoResponse.swift in Sources */,
 				03D56E0A2430075B00AF7273 /* AppDelegate.swift in Sources */,
 				03E297C024309B1900D6E096 /* PandaGoProvider.swift in Sources */,
 				03CBC34924304E5C00B24D83 /* SignUpStep1ViewController.swift in Sources */,
 				03CBC34524303F8400B24D83 /* SignInStep1ViewController.swift in Sources */,
+				03E297CC2430B4F000D6E096 /* PopUpViewController.swift in Sources */,
 				03CBC3472430442A00B24D83 /* SignInStep2ViewController.swift in Sources */,
 				03E297C72430A4F700D6E096 /* VerificationResponse.swift in Sources */,
+				03E297CD2430B4F000D6E096 /* ShopViewController.swift in Sources */,
 				03E297BD24308CD500D6E096 /* String+Extension.swift in Sources */,
 				03CBC34B24304E7D00B24D83 /* SignUpStep2ViewController.swift in Sources */,
 				03E297B32430615500D6E096 /* FriendListTableViewCell.swift in Sources */,
@@ -356,6 +371,7 @@
 				03E297C224309B2600D6E096 /* PandaGoService.swift in Sources */,
 				03D56E0C2430075B00AF7273 /* SceneDelegate.swift in Sources */,
 				03CBC34D24304E8B00B24D83 /* SignUpStep3ViewController.swift in Sources */,
+				03E297D12430CB6C00D6E096 /* FightPopUpViewController.swift in Sources */,
 				03E297BB2430824200D6E096 /* KeyBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
