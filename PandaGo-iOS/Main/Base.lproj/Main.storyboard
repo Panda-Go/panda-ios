@@ -183,6 +183,7 @@
                         <outlet property="corona2ImageView" destination="MgQ-SO-TWY" id="WcY-6P-mpO"/>
                         <outlet property="corona3ImageView" destination="OpV-Zw-tiN" id="ddb-YR-vg0"/>
                         <outlet property="corona4ImageView" destination="mA6-SD-OY9" id="2uY-YF-96t"/>
+                        <outlet property="corona5ImageView" destination="ddU-iR-Wht" id="i2E-TR-yDj"/>
                         <outlet property="fryImageView" destination="Tuq-JA-v6D" id="0aq-oa-5h3"/>
                         <outlet property="pointLabel" destination="DpP-4Q-nvA" id="v52-8k-HKH"/>
                         <outlet property="weaponImageView" destination="rNF-vL-eRw" id="umV-uz-vOd"/>
@@ -190,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-2803" y="-140"/>
         </scene>
     </scenes>
     <resources>

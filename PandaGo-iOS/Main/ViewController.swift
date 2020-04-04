@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var corona2ImageView: UIImageView!
     @IBOutlet weak var corona3ImageView: UIImageView!
     @IBOutlet weak var corona4ImageView: UIImageView!
+    @IBOutlet weak var corona5ImageView: UIImageView!
     @IBOutlet weak var chipImageView: UIImageView!
     @IBOutlet weak var cokeImageView: UIImageView!
     @IBOutlet weak var fryImageView: UIImageView!
@@ -131,6 +132,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = true
             corona3ImageView.isHidden = true
             corona4ImageView.isHidden = true
+            corona5ImageView.isHidden = true
         }
         else if point < 1500 && point >= 1000 {
             chipImageView.isHidden = true
@@ -141,6 +143,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = true
             corona3ImageView.isHidden = true
             corona4ImageView.isHidden = true
+            corona5ImageView.isHidden = true
         }
         else if point < 1000 && point >= 850 {
             chipImageView.isHidden = true
@@ -151,6 +154,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = true
             corona3ImageView.isHidden = true
             corona4ImageView.isHidden = true
+            corona5ImageView.isHidden = true
         }
         else if point < 850 && point >= 700 {
             chipImageView.isHidden = true
@@ -161,6 +165,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = true
             corona3ImageView.isHidden = true
             corona4ImageView.isHidden = true
+            corona5ImageView.isHidden = true
         }
         else if point < 700 && point >= 550 {
             chipImageView.isHidden = true
@@ -171,6 +176,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = true
             corona3ImageView.isHidden = true
             corona4ImageView.isHidden = true
+            corona5ImageView.isHidden = true
         }
         else {
             chipImageView.isHidden = true
@@ -181,6 +187,7 @@ class ViewController: UIViewController {
             corona2ImageView.isHidden = false
             corona3ImageView.isHidden = false
             corona4ImageView.isHidden = false
+            corona5ImageView.isHidden = false
         }
        
         let animation = Animation.named(animationName)

@@ -25,7 +25,7 @@ extension PandaGoService:TargetType {
         return Data()
     }
 
-    var baseURL: URL { return URL(string: "http://ec2-3-21-169-37.us-east-2.compute.amazonaws.com:3000")!}
+    var baseURL: URL { return URL(string: "http://ec2-18-219-77-8.us-east-2.compute.amazonaws.com:3000")!}
     var path: String { // 서버에 던져줄 주소 값
         switch self {
         case .getLoginOTP:
